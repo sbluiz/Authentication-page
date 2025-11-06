@@ -8,14 +8,12 @@ export function SigIn() {
 
 
       <div className="flex-col">
-        <div>
           <div className="min-h-screen flex items-center justify-center">
             <FormLogin />
           </div>
           <div className="mt-10">
             <Registers />
           </div>
-        </div>
       </div>
 
     </>
