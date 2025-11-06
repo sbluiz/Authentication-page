@@ -54,6 +54,41 @@ app.get("/usuarios", async (req, res) => {
   }
 });
 
+// 🔹 Login / Checar usuário
+app.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({ message: "Email e senha são obrigatórios" });
+    }
+
+    // Busca o usuário pelo email e senha
+    const user = await prisma.user.findFirst({
+      where: {
+        email,
+        password, // ⚠️ Em produção, use hash de senha! Nunca salve senha em texto puro.
+      },
+    });
+
+    if (!user) {
+      return res.status(401).json({ message: "Usuário não encontrado ou senha incorreta" });
+    }
+
+    // Retorna os dados do usuário
+    res.status(200).json({
+      name: user.name,
+      email: user.email,
+      favoriteSport: user.favoriteSport,
+      state: user.state,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Erro ao checar usuário" });
+  }
+});
+
+
 // Usa a porta do Render ou 3001 localmente
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
