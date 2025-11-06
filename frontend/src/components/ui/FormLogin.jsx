@@ -19,7 +19,7 @@ export function FormLogin() {
         const dados = { email, name, state,favoriteSport, password }; // objeto com os valores
 
         try {
-            const resposta = await fetch('http://localhost:3001/usuarios', {
+            const resposta = await fetch('{https://backend-authentication-nryf.onrender.com}', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
