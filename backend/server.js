@@ -44,6 +44,6 @@ app.get("/usuarios", async (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log('Servidor iniciado em http://localhost:3001');
+    console.log('Servidor iniciado.');
 });
 

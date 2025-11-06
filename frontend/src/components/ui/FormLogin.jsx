@@ -38,14 +38,14 @@ export function FormLogin() {
 
     return (
         <>
-            <div className="flex items-center justify-center bg-gray-10 p-4 space-y-10 gap-15" >
+            <div className="flex  flex-col md:flex-row items-center justify-center bg-gray-10 p-4 space-y-10 gap-15" >
 
-                <div className="space-y-5">
+                <div className=" md:space-y-5 pt-20">
                     <h1 className="text-5xl pt-5 text-blue-900 font-bold">Sistema de cadastro em banco de dados</h1>
                     <p className="w-[290px]">Projeto desenvolvido com React.js, ShadCN e MongoDB.</p>
                 </div>
 
-                <div className="mt-30">
+                <div >
                     <Tabs defaultValue="loginaccount" className="w-[350px] bg-blue-600 border border-black rounded-lg p-5">
                         <TabsList className="w-full">
                             <TabsTrigger value="loginaccount" className="hover:bg-blue-400">Exibir dados</TabsTrigger>
