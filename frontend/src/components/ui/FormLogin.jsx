@@ -40,7 +40,7 @@ export function FormLogin() {
         <>
             <div className="flex  flex-col md:flex-row items-center justify-center bg-gray-10 p-4 space-y-10 gap-15" >
 
-                <div className=" md:space-y-5 pt-30">
+                <div className=" md:space-y-5 mt-60 md:mt-0">
                     <h1 className="text-5xl pt-5 text-blue-900 font-bold">Sistema de cadastro em banco de dados</h1>
                     <p className="w-[290px]">Projeto desenvolvido com React.js, ShadCN e MongoDB.</p>
                 </div>
