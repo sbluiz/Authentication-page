@@ -41,8 +41,8 @@ export function FormLogin() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-10 p-4 gap-10">
-        <div className="md:space-y-5 mt-10 md:mt-0">
+      <div className="flex flex-col md:flex-row items-center justify-center bg-gray-10 p-4 space-y-10 gap-15">
+        <div className="md:space-y-5 mt-60 md:mt-0">
           <h1 className="text-4xl md:text-5xl pt-5 text-blue-900 font-bold">
             Sistema de cadastro em banco de dados
           </h1>
@@ -50,7 +50,7 @@ export function FormLogin() {
         </div>
 
         <div>
-          <Tabs defaultValue="loginaccount" className=" mt-10 md:mt-0 w-[350px] bg-blue-600 border border-black rounded-lg p-5">
+          <Tabs defaultValue="loginaccount" className="w-[350px] bg-blue-600 border border-black rounded-lg p-5">
             <TabsList className="w-full">
               <TabsTrigger value="loginaccount" className="hover:bg-blue-400">Exibir dados</TabsTrigger>
               <TabsTrigger value="createaccount" className="hover:bg-blue-400">Cadastrar-se</TabsTrigger>
