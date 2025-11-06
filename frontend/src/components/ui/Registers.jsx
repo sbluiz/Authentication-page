@@ -4,6 +4,10 @@ import {
   TableHead, TableHeader, TableRow
 } from "./table.jsx";
 
+
+const API_URL = "https://backend-authentication-nryf.onrender.com";
+
+
 export function Registers() {
   // Estado que vai guardar os dados vindos do backend
   const [usuarios, setUsuarios] = useState([]);
@@ -11,7 +15,7 @@ export function Registers() {
   useEffect(() => {
     async function carregarDados() {
       try {
-        const resposta = await fetch("http://localhost:3001/usuarios");
+        const resposta = await fetch(`${API_URL}/usuarios`);
         const dados = await resposta.json();
         setUsuarios(dados);
       } catch (erro) {

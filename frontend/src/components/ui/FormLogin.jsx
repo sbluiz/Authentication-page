@@ -2,7 +2,7 @@ import { useState } from "react"
 import Button from "./button.jsx";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs.jsx";
 import { Input } from "./input.jsx"
-
+const API_URL = "https://backend-authentication-nryf.onrender.com";
 
 
 
@@ -19,7 +19,7 @@ export function FormLogin() {
         const dados = { email, name, state,favoriteSport, password }; // objeto com os valores
 
         try {
-            const resposta = await fetch('{https://backend-authentication-nryf.onrender.com}', {
+            const resposta = await fetch(`${API_URL}/usuarios`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
