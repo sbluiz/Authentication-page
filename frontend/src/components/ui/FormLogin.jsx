@@ -41,7 +41,7 @@ export function FormLogin() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-center bg-gray-10 p-4 space-y-10 gap-15">
+      <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-10 p-4 gap-10">
         <div className="md:space-y-5 mt-10 md:mt-0">
           <h1 className="text-4xl md:text-5xl pt-5 text-blue-900 font-bold">
             Sistema de cadastro em banco de dados
